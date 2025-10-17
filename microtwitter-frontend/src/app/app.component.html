@@ -1,0 +1,30 @@
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- <div class="container">
+  <h1>MicroTwitter</h1>
+  <div *ngIf="authenticationService.isLoggedIn(); else showAuth">
+    <app-post-list></app-post-list>
+  </div>
+
+  <ng-template #showAuth>
+    <app-auth></app-auth>
+  </ng-template>
+</div> -->
+<div class="container">
+  <h1>MicroTwitter</h1>
+  
+  <div *ngIf="authenticationService.isLoggedIn(); else showAuth">
+    <!-- Add logout button -->
+    <button (click)="logout()" style="float: right;" class="logout-btn">Logout</button>
+    <app-post-list></app-post-list>
+  </div>
+
+  <ng-template #showAuth>
+    <app-auth></app-auth>
+  </ng-template>
+</div>

@@ -1,0 +1,52 @@
+<div class="auth-container">
+  <h2>{{ isLoginMode ? 'Login' : 'Register' }}</h2>
+
+  <!-- Success Message -->
+  <div *ngIf="successMessage" class="alert alert-success">
+    {{ successMessage }}
+  </div>
+
+  <!-- Error Message -->
+  <div *ngIf="errorMessage" class="alert alert-error">
+    {{ errorMessage }}
+  </div>
+
+  <form (submit)="submit(); $event.preventDefault()" class="auth-form">
+    <!-- Username (both login & register) -->
+    <input
+      type="text"
+      placeholder="Username"
+      [(ngModel)]="user.username"
+      name="username"
+      required
+    />
+
+    <!-- Email (only for register) -->
+    <input
+      *ngIf="!isLoginMode"
+      type="email"
+      placeholder="Email"
+      [(ngModel)]="user.email"
+      name="email"
+      required
+    />
+
+    <!-- Password -->
+    <input
+      type="password"
+      placeholder="Password"
+      [(ngModel)]="user.password"
+      name="password"
+      required
+    />
+
+    <button type="submit">{{ isLoginMode ? 'Login' : 'Register' }}</button>
+  </form>
+
+  <p>
+    {{ isLoginMode ? "Don't have an account?" : "Already have an account?" }}
+    <a href="#" (click)="toggleMode(); $event.preventDefault()">
+      {{ isLoginMode ? 'Register here' : 'Login here' }}
+    </a>
+  </p>
+</div>

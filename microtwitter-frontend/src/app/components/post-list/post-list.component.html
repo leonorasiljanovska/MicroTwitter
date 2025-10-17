@@ -1,0 +1,76 @@
+<div class="feed-container">
+     <div class="tabs">
+    <button 
+      class="tab" 
+      [class.active]="activeTab === 'all'"
+      (click)="setActiveTab('all')"
+    >
+      Posts
+    </button>
+    <button 
+      class="tab" 
+      [class.active]="activeTab === 'my-posts'"
+      (click)="setActiveTab('my-posts')"
+    >
+      My Posts
+    </button>
+  </div>
+
+  <div class="post-creation">
+    <textarea 
+      [(ngModel)]="newContent" 
+      placeholder="What's on your mind?" 
+      rows="3"
+      maxlength="140"
+    ></textarea>
+    <input 
+    type="text" 
+    [(ngModel)]="newImageUrl" 
+    placeholder="Optional: paste image URL" 
+  />
+
+  <!-- Optional preview -->
+  <div *ngIf="newImageUrl">
+    <img [src]="newImageUrl" alt="Preview" class="image-preview"/>
+    <button (click)="removeImageUrl()">Remove</button>
+  </div>
+    <div class="post-creation-footer">
+      <span class="char-count" [class.warning]="newContent.length > 120">
+        {{ newContent.length }}/140
+      </span>
+      <button (click)="addPost()" class="post-button">Post</button>
+    </div>
+  </div>
+
+  <!-- post-list -->
+  <div class="post-list">
+    <div *ngFor="let post of filteredPosts" class="post-card">
+      <div class="post-header">
+        <div class="user-info">
+          <div class="user-details">
+            <span class="username">@{{ post.username }}</span>
+          </div>
+          
+        </div>
+         <div class="post-header-right">
+                <span class="date">{{ post.createdAt | timeAgo }}</span>
+                <button *ngIf="post.username === authService.getCurrentUsername()" 
+          class="delete-btn" 
+          (click)="deletePost(post.id)"
+         >
+          <span>Delete</span>
+        </button>
+            </div>
+      </div>
+      
+      <p class="post-content">{{ post.content }}</p>
+      
+      <img 
+        *ngIf="post.imageUrl" 
+        [src]="post.imageUrl" 
+        alt="Post image" 
+        class="post-image"
+      />
+    </div> 
+  </div>
+</div>
