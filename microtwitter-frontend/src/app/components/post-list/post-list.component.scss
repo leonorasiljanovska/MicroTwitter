@@ -180,3 +180,12 @@
     }
   }
 }
+.image-preview {
+  max-width: 300px;   /* limits width */
+  max-height: 300px;  /* limits height */
+  width: auto;        /* keeps aspect ratio */
+  height: auto;       /* keeps aspect ratio */
+  display: block;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  b
