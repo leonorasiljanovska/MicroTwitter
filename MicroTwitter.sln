@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36401.2 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroTwitter.Api", "MicroTwitter.Api\MicroTwitter.Api.csproj", "{B72490F3-CFD7-4C5E-B5BD-8915BEB7F7A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroTwitter.Tests", "MicroTwitter.Tests\MicroTwitter.Tests.csproj", "{A183A4E4-70AD-49A1-B98F-58F69A03BF57}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B72490F3-CFD7-4C5E-B5BD-8915BEB7F7A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B72490F3-CFD7-4C5E-B5BD-8915BEB7F7A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B72490F3-CFD7-4C5E-B5BD-8915BEB7F7A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B72490F3-CFD7-4C5E-B5BD-8915BEB7F7A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A183A4E4-70AD-49A1-B98F-58F69A03BF57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A183A4E4-70AD-49A1-B98F-58F69A03BF57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A183A4E4-70AD-49A1-B98F-58F69A03BF57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A183A4E4-70AD-49A1-B98F-58F69A03BF57}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1AFC5650-143A-44E1-92AA-5BE0EB4E8AFE}
+	EndGlobalSection
+EndGlobal

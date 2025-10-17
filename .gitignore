@@ -1,0 +1,19 @@
+# Visual Studio
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Node / Angular
+microtwitter-frontend/node_modules/
+microtwitter-frontend/dist/
+npm-debug.log
+yarn-error.log
+# Node / Angular
+microtwitter-frontend/node_modules/
+microtwitter-frontend/dist/
+npm-debug.log
+yarn-error.log

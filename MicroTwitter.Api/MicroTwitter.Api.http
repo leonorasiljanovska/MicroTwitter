@@ -1,0 +1,6 @@
+@MicroTwitter.Api_HostAddress = http://localhost:5234
+
+GET {{MicroTwitter.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
