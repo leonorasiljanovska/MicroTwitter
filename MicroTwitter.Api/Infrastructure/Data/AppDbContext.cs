@@ -9,7 +9,7 @@ namespace MicroTwitter.Api.Infrastructure.Data
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
         }
-        // DbSet for Posts
+    
         public DbSet<Post> Posts { get; set; }
         public DbSet<User> Users { get; set; }
 
