@@ -2,7 +2,6 @@
   <h1>MicroTwitter</h1>
   
   <div *ngIf="authenticationService.isLoggedIn(); else showAuth">
-    <!-- Add logout button -->
     <button (click)="logout()" style="float: right;" class="logout-btn">Logout</button>
     <app-post-list></app-post-list>
   </div>
