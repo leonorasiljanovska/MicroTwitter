@@ -26,58 +26,65 @@ MicroTwitter/
 
 ## How to Run the Application
 
-- Backend (.NET 9 Web API)
+ # Backend (.NET 9 Web API)
 
-Open the solution file MicroTwitter.sln in Visual Studio 2022 (or later).
+- Open the solution file MicroTwitter.sln in Visual Studio 2022 (or later).
 
-In the Solution Explorer, right-click on MicroTwitter.Api and choose “Set as Startup Project.”
+- In the Solution Explorer, right-click on MicroTwitter.Api and choose “Set as Startup Project.”
 
-The project uses an InMemory database, so no database setup or connection string configuration is needed.
+- The project uses an InMemory database, so no database setup or connection string configuration is needed.
 
-Run the API using Ctrl + F5 or the Run button.
+- Run the API using Ctrl + F5 or the Run button.
 
-The API will start at a URL like:
+- The API will start at a URL like:
 
-https://localhost:5001
+   https://localhost:5001
 
 
 You can test the endpoints in Swagger UI, available at:
 
 https://localhost:5001/swagger
 
+# Frontend (Angular 17)
 
-- Frontend (Angular 17)
+- Open a terminal and navigate to the frontend folder:
 
-Open a terminal and navigate to the frontend folder:
-
-cd microtwitter-frontend
-
-
-Install dependencies:
-
-npm install
+  cd microtwitter-frontend
 
 
-Check the backend port:
-When the .NET API starts, Visual Studio will show the port in the console (for example, https://localhost:7246).
-Open your Angular service file (for example, src/app/services/auth.service.ts) and update the backend URL if needed:
+- Install dependencies:
 
-private apiUrl = "https://localhost:[YOUR_PORT]/api/authentication";
+  npm install
+
+
+- Check the backend port:
+  When the .NET API starts, Visual Studio will show the port in the console (for example, https://localhost:7246).
+  Update the port in the following Angular service files if needed:
+
+  src/app/services/authentication.service.ts
+
+  private apiUrl = "https://localhost:[YOUR_PORT]/api/authentication";
+
+
+  src/app/services/post.service.ts
+
+  private apiUrl = "https://localhost:[YOUR_PORT]/api/posts";
 
 
 Example:
 
 private apiUrl = "https://localhost:7246/api/authentication";
+private apiUrl = "https://localhost:7246/api/posts";
 
 
-Start the Angular development server:
+- Start the Angular development server:
 
-ng serve
+  ng serve
 
 
-Open your browser and visit:
+-Open your browser and visit:
 
-http://localhost:4200
+ http://localhost:4200
 
 
 The frontend will now connect to your backend at the specified port.
