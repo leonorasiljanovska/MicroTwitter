@@ -10,13 +10,13 @@ using Microsoft.OpenApi.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-//builder.Services.AddDbContext<AppDbContext>(options =>
-//    options.UseInMemoryDatabase("MicroTwitterDb"));
-
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(connectionString));
+    options.UseInMemoryDatabase("MicroTwitterDb"));
+
+// var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+// builder.Services.AddDbContext<AppDbContext>(options =>
+//     options.UseSqlServer(connectionString));
 builder.Services.AddHttpContextAccessor();
 
 
