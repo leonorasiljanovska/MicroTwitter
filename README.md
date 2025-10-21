@@ -26,7 +26,7 @@ MicroTwitter/
 
 ## How to Run the Application
 
--Backend (.NET 9 Web API)
+- Backend (.NET 9 Web API)
 
 Open the solution file MicroTwitter.sln in Visual Studio 2022 (or later).
 
@@ -46,7 +46,7 @@ You can test the endpoints in Swagger UI, available at:
 https://localhost:5001/swagger
 
 
--Frontend (Angular 17)
+- Frontend (Angular 17)
 
 Open a terminal and navigate to the frontend folder:
 
